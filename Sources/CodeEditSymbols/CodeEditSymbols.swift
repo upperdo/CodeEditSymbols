@@ -11,7 +11,7 @@ public extension Image {
     /// Creates an Image representing a custom SF Symbol
     /// - Parameter symbol: The name of the symbol in `Symbols.xcassets`
     init(symbol: String) {
-        self.init(symbol, bundle: Bundle.main)
+        self.init(symbol, bundle: Bundle.module)
     }
 
     // MARK: - Symbols
@@ -44,7 +44,7 @@ public extension NSImage {
     /// - Parameter named: The name of the symbol in `Symbols.xcassets`
     /// - Returns: a NSImage
     static func symbol(named: String) -> NSImage? {
-        Bundle.main.image(forResource: named)
+        Bundle.module.image(forResource: named)
     }
 
     // MARK: - Symbols
