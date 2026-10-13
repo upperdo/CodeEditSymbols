@@ -23,7 +23,8 @@ let package = Package(
     targets: [
         .target(
             name: "CodeEditSymbols",
-            dependencies: []
+            dependencies: [],
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "CodeEditSymbolsTests",
